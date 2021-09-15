@@ -1,11 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box
 }
-@import "./song";
-@import "./controls";
 
 .App {
-  height: 100vh;
-  border: 2px solid red;
 }
+@import "./player";
+@import "./songInfo";
+@import "./controls";

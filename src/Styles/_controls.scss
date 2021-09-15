@@ -1,2 +1,21 @@
-.container {
+.controls {
+  min-height: 20vh;
+  .time-control {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+
+    input {
+      width: 80%;
+    }
+    h4 {
+      padding: 10px;
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+  }
 }

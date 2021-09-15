@@ -8,7 +8,7 @@ export default function data() {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=21734",
       color: ["#FBB189", "#90ABB6"],
       id: uuidv4(),
-      active: false,
+      active: true,
     },
     {
       name: "Solar Cove",

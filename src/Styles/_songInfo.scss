@@ -1,0 +1,23 @@
+.song-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 40vh;
+  img {
+    margin: 10px;
+    width: 50%;
+    border-radius: 50%;
+  }
+  h1 {
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    margin: 5px;
+  }
+  h3 {
+    text-align: center;
+    white-space: nowrap;
+    width: 40%;
+    margin: 5px;
+  }
+}
