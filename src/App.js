@@ -1,4 +1,4 @@
-import "./App.css";
+import "./Styles/App.scss";
 import Song from "./Components/Song.js";
 import Controls from "./Components/Controls.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 function App() {
   return (
-    <div>
+    <div className="App">
       <Song />
       <Controls />
       <FontAwesomeIcon className="skip-back" size="2x" icon={faAngleLeft} />
