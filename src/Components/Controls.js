@@ -4,6 +4,7 @@ import {
   faPlay,
   faAngleRight,
   faAngleLeft,
+  faPause,
 } from "@fortawesome/free-solid-svg-icons";
 import { secondToMinutes } from "../js/utill";
 export default function Controls({ currentSong, setCurrentSong }) {
@@ -30,7 +31,6 @@ export default function Controls({ currentSong, setCurrentSong }) {
   }
   function changeHandler(e) {
     const value = e.target.value;
-    console.log(value);
     setTime({ ...time, currentTime: value });
     audioRef.current.currentTime = value;
   }
@@ -59,7 +59,7 @@ export default function Controls({ currentSong, setCurrentSong }) {
           onClick={clickHandler}
           className="ic play"
           size="2x"
-          icon={faPlay}
+          icon={isPlaying === true ? faPause : faPlay}
         />
         <FontAwesomeIcon
           className="ic skip-forward"
