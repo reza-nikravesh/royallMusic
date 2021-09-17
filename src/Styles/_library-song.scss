@@ -1,6 +1,6 @@
 .library-song {
   border-radius: 5px;
-  box-shadow: 0px 2px 5px gray;
+  // box-shadow: 0px 2px 5px gray;
   margin: 0.5rem;
   cursor: pointer;
   display: flex;
@@ -22,4 +22,7 @@
       font-weight: 400;
     }
   }
+}
+.active {
+  background-color: lightblue;
 }

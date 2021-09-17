@@ -7,9 +7,13 @@ import {
   faPause,
 } from "@fortawesome/free-solid-svg-icons";
 import { secondToMinutes } from "../js/utill";
-export default function Controls({ currentSong, setCurrentSong }) {
+export default function Controls({
+  currentSong,
+  setCurrentSong,
+  isPlaying,
+  setIsPlaying,
+}) {
   const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [time, setTime] = useState({ currentTime: null, duration: null });
 
   function clickHandler() {

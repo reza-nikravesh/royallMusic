@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-export  function data() {
+export function data() {
   return [
     {
       name: "Bell Tower",
@@ -144,6 +144,5 @@ export function secondToMinutes(time) {
   if (seconds < 10) {
     seconds = "0" + seconds;
   }
-  return  minutes + ":" + seconds; // Return is HH : MM : SS
+  return minutes + ":" + seconds; // Return is HH : MM : SS
 }
-
