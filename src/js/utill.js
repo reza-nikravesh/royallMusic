@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-export default function data() {
+export  function data() {
   return [
     {
       name: "Bell Tower",
@@ -59,10 +59,60 @@ export default function data() {
     {
       name: "Night Rider",
       artist: "Masked Wolf",
-      cover: "https://i.ytimg.com/vi/68jdIFyItaE/sddefault.jpg#404_is_fine",
+      cover: "https://m.media-amazon.com/images/I/81uDQVrzmoL._SS500_.jpg",
       audio:
         "https://dl2.hitseda.com/dl1/bm/masked%20wolf/1/03.Masked%20Wolf%20-%20Night%20Rider.mp3?_=3",
       color: ["#9A9A9A", "#333333"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Speed Racer",
+      artist: "Masked Wolf",
+      cover: "https://i1.sndcdn.com/artworks-000454374240-wvauj4-t500x500.jpg",
+      audio:
+        "https://dl2.hitseda.com/dl1/bm/masked%20wolf/1/08.Speed%20Racer%20CD%201%20TRACK%201%20%28320%29.mp3?_=8",
+      color: ["#4B4B4B", "#191919"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Speed Racer",
+      artist: "Masked Wolf",
+      cover: "https://i1.sndcdn.com/artworks-000454374240-wvauj4-t500x500.jpg",
+      audio:
+        "https://dl2.hitseda.com/dl1/bm/masked%20wolf/1/08.Speed%20Racer%20CD%201%20TRACK%201%20%28320%29.mp3?_=8",
+      color: ["#4B4B4B", "#191919"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Speed Racer",
+      artist: "Masked Wolf",
+      cover: "https://i1.sndcdn.com/artworks-000454374240-wvauj4-t500x500.jpg",
+      audio:
+        "https://dl2.hitseda.com/dl1/bm/masked%20wolf/1/08.Speed%20Racer%20CD%201%20TRACK%201%20%28320%29.mp3?_=8",
+      color: ["#4B4B4B", "#191919"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Speed Racer",
+      artist: "Masked Wolf",
+      cover: "https://i1.sndcdn.com/artworks-000454374240-wvauj4-t500x500.jpg",
+      audio:
+        "https://dl2.hitseda.com/dl1/bm/masked%20wolf/1/08.Speed%20Racer%20CD%201%20TRACK%201%20%28320%29.mp3?_=8",
+      color: ["#4B4B4B", "#191919"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Speed Racer",
+      artist: "Masked Wolf",
+      cover: "https://i1.sndcdn.com/artworks-000454374240-wvauj4-t500x500.jpg",
+      audio:
+        "https://dl2.hitseda.com/dl1/bm/masked%20wolf/1/08.Speed%20Racer%20CD%201%20TRACK%201%20%28320%29.mp3?_=8",
+      color: ["#4B4B4B", "#191919"],
       id: uuidv4(),
       active: false,
     },

@@ -3,9 +3,8 @@ import SongInfo from "./SongInfo.js";
 import Controls from "./Controls.js";
 import data from "../js/utill";
 
-export default function Player() {
-  const [songs, setSongs] = useState(data());
-  const [currentSong, setCurrentSong] = useState(songs[0]);
+export default function Player({songs, setSongs}) {
+  const [currentSong, setCurrentSong] = useState(songs[4]);
   return (
     <div className="player">
       <SongInfo currentSong={currentSong}/>

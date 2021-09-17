@@ -1,0 +1,25 @@
+.library-song {
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px gray;
+  margin: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  &:hover {
+    background-color: lightblue;
+  }
+
+  img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .text {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    .artist {
+      font-size: 14px;
+      color: darkgray;
+      font-weight: 400;
+    }
+  }
+}
