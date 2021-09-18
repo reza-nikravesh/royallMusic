@@ -16,6 +16,8 @@ export default function Player({
     <div className="player">
       <SongInfo currentSong={currentSong} />
       <Controls
+        songs={songs}
+        setSongs={setSongs}
         audioRef={audioRef}
         currentSong={currentSong}
         setCurrentSong={setCurrentSong}

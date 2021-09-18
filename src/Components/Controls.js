@@ -13,12 +13,28 @@ export default function Controls({
   isPlaying,
   setIsPlaying,
   audioRef,
+  songs,
+  setSongs,
 }) {
-  //useRef
-
+  //useEffect
   //state
   const [time, setTime] = useState({ currentTime: null, duration: null });
 
+  function updateData() {
+    const newSong = songs.map((song) => {
+      if (song.id === currentSong.id) return { ...song, active: true };
+      else return { ...song, active: false };
+    });
+    setSongs(newSong);
+    setTimeout(() => {
+      if (isPlaying) {
+        audioRef.current.play();
+      } else {
+        setIsPlaying(!isPlaying);
+        audioRef.current.play();
+      }
+    }, 500);
+  }
   function clickHandler() {
     if (isPlaying) {
       setIsPlaying(!isPlaying);
@@ -42,6 +58,38 @@ export default function Controls({
     setTime({ ...time, currentTime: value });
     audioRef.current.currentTime = value;
   }
+  function skipTrack(direction) {
+    // get currentSong index
+    let currentSongIndex = songs.findIndex((song) => {
+      if (song.id === currentSong.id) return song;
+    });
+
+    switch (direction) {
+      case "skip-back":
+        if (0 === currentSongIndex) {
+          setCurrentSong(songs[songs.length - 1]);
+          updateData();
+        } else {
+          setCurrentSong(songs[currentSongIndex - 1]);
+          updateData();
+        }
+
+        break;
+      case "skip-forward":
+        if (songs.length - 1 === currentSongIndex) {
+          setCurrentSong(songs[0]);
+          updateData();
+        } else {
+          setCurrentSong(songs[currentSongIndex + 1]);
+          updateData();
+        }
+
+        break;
+
+      default:
+        break;
+    }
+  }
   return (
     <div className="controls">
       <div className="time-control">
@@ -60,7 +108,10 @@ export default function Controls({
       </div>
       <div className="buttons">
         <FontAwesomeIcon
-          className="ic skip-back"
+          onClick={() => {
+            skipTrack("skip-back");
+          }}
+          className="ic back"
           size="2x"
           icon={faAngleLeft}
         />
@@ -71,7 +122,10 @@ export default function Controls({
           icon={isPlaying === true ? faPause : faPlay}
         />
         <FontAwesomeIcon
-          className="ic skip-forward"
+          onClick={() => {
+            skipTrack("skip-forward");
+          }}
+          className="ic forward"
           size="2x"
           icon={faAngleRight}
         />
