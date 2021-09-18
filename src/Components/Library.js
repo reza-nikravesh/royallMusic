@@ -21,10 +21,8 @@ export default function Library({
             setCurrentSong={setCurrentSong}
             songs={songs}
             setSongs={setSongs}
-            name={item.name}
-            cover={item.cover}
-            artist={item.artist}
-          />
+            song={item}
+            />
         );
       })}
     </div>
