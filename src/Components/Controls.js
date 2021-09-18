@@ -49,7 +49,8 @@ export default function Controls({
         <input
           onChange={changeHandler}
           min={0}
-          max={time.duration}
+          // max={String(time.duration)}
+          max={time.duration || 0}
           value={time.currentTime === null ? 0 : time.currentTime}
           type="range"
           name=""

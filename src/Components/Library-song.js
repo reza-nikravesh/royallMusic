@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function LibrarySong({
-  active,
   song,
   currentSong,
   setCurrentSong,
@@ -15,6 +14,12 @@ export default function LibrarySong({
   function clickHandler(e) {
     const selectedSong = songs.filter((item) => item.id === id);
     setCurrentSong(selectedSong[0]);
+
+    const newSong = songs.map((song) => {
+      if (song.id === id) return { ...song, active: true };
+      else return { ...song, active: false };
+    });
+    setSongs(newSong);
     setTimeout(() => {
       if (isPlaying) {
         audioRef.current.play();
@@ -27,11 +32,11 @@ export default function LibrarySong({
   return (
     <div
       onClick={clickHandler}
-      className={`library-song ${active ? "active" : ""}`}
+      className={`library-song ${song.active ? "selected" : ""}`}
     >
       <img src={song.cover} alt="" />
-      <div className="text">
-        <h3 className="name">{song.name}</h3>
+      <div className={song.active ? "text-active" : "text"}>
+        <h3 className={'name'}>{song.name}</h3>
         <h5 className="artist">{song.artist}</h5>
       </div>
     </div>

@@ -5,7 +5,7 @@
   cursor: pointer;
   display: flex;
   &:hover {
-    background-color: lightblue;
+    background-color: rgb(222, 222, 255);
   }
 
   img {
@@ -23,6 +23,17 @@
     }
   }
 }
-.active {
-  background-color: lightblue;
+.selected {
+  &:hover{
+    background-color: rgb(119, 119, 243)
+  }
+  background-color: rgb(119, 119, 243);
+  .text-active {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    .artist {
+      color: white;
+    }
+  }
 }
