@@ -9,10 +9,20 @@ export default function LibrarySong({
   setSongs,
   id,
   setIsPlaying,
+  audioRef,
+  isPlaying,
 }) {
   function clickHandler(e) {
     const selectedSong = songs.filter((item) => item.id === id);
     setCurrentSong(selectedSong[0]);
+    setTimeout(() => {
+      if (isPlaying) {
+        audioRef.current.play();
+      } else {
+        setIsPlaying(!isPlaying);
+        audioRef.current.play();
+      }
+    }, 500);
   }
   return (
     <div

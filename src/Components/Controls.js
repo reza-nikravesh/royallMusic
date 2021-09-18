@@ -12,8 +12,11 @@ export default function Controls({
   setCurrentSong,
   isPlaying,
   setIsPlaying,
+  audioRef,
 }) {
-  const audioRef = useRef(null);
+  //useRef
+
+  //state
   const [time, setTime] = useState({ currentTime: null, duration: null });
 
   function clickHandler() {
@@ -32,6 +35,7 @@ export default function Controls({
       currentTime: currentTime,
       duration: duration,
     });
+    if (currentTime === duration) setIsPlaying(false);
   }
   function changeHandler(e) {
     const value = e.target.value;

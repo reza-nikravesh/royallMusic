@@ -10,11 +10,13 @@ export default function Player({
   setCurrentSong,
   isPlaying,
   setIsPlaying,
+  audioRef,
 }) {
   return (
     <div className="player">
       <SongInfo currentSong={currentSong} />
       <Controls
+        audioRef={audioRef}
         currentSong={currentSong}
         setCurrentSong={setCurrentSong}
         isPlaying={isPlaying}

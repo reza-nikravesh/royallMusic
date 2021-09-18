@@ -7,12 +7,16 @@ export default function Library({
   currentSong,
   setCurrentSong,
   setIsPlaying,
+  audioRef,
+  isPlaying
 }) {
   return (
     <div className="library">
       {songs.map((item) => {
         return (
           <LibrarySong
+          isPlaying={isPlaying}
+            audioRef={audioRef}
             setIsPlaying={setIsPlaying}
             key={item.id}
             id={item.id}
@@ -22,7 +26,7 @@ export default function Library({
             songs={songs}
             setSongs={setSongs}
             song={item}
-            />
+          />
         );
       })}
     </div>
