@@ -7,6 +7,7 @@ import {
   faPause,
 } from "@fortawesome/free-solid-svg-icons";
 import { secondToMinutes } from "../js/utill";
+import {Range} from "./styledComponents";
 export default function Controls({
   currentSong,
   setCurrentSong,
@@ -94,7 +95,7 @@ export default function Controls({
     <div className="controls">
       <div className="time-control">
         <h4>{secondToMinutes(time.currentTime)}</h4>
-        <input
+        {/* <input
           onChange={changeHandler}
           min={0}
           // max={String(time.duration)}
@@ -103,6 +104,16 @@ export default function Controls({
           type="range"
           name=""
           id=""
+        /> */}
+        <Range
+          type="range"
+          onChange={changeHandler}
+          min={0}
+          // max={String(time.duration)}
+          max={time.duration || 0}
+          value={time.currentTime === null ? 0 : time.currentTime}
+          startColor={currentSong.color[0]}
+          endColor={currentSong.color[1]}
         />
         <h4>{secondToMinutes(time.duration)}</h4>
       </div>
