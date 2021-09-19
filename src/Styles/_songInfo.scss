@@ -1,12 +1,13 @@
 .song-info {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 40vh;
   img {
+    width: 45%;
     min-height: 20%;
     margin: 10px;
-    width: 45%;
     border-radius: 50%;
   }
   h1 {
@@ -23,6 +24,12 @@
     width: 40%;
     margin: 5px;
     font-weight: lighter;
-
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 414px) {
+  .song-info {
+    img {
+      width: 70%;
+    }
   }
 }

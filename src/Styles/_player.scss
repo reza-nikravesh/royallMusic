@@ -5,5 +5,16 @@
   min-height: 60vh;
   display: flex;
   flex-direction: column;
- 
+}
+@media only screen and (min-width: 375px) and (max-width: 414px) {
+  .player {
+    margin-top: 15%;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .player {
+    width: 90%;
+    height: 70vh;
+  }
 }

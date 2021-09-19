@@ -15,6 +15,7 @@ function App() {
       <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
       <Library
         isOpen={isOpen}
+        setIsOpen={setIsOpen}
         isPlaying={isPlaying}
         audioRef={audioRef}
         setIsPlaying={setIsPlaying}

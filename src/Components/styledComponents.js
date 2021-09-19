@@ -31,8 +31,6 @@ export const Range = styled.input`
   overflow: hidden;
   display: block;
   appearance: none;
-  max-width: 700px;
-  width: 100%;
   margin: 0;
   height: ${height};
   cursor: pointer;
@@ -137,4 +135,3 @@ export const Range = styled.input`
     }
   }
 `;
-;

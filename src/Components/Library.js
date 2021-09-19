@@ -10,6 +10,7 @@ export default function Library({
   audioRef,
   isPlaying,
   isOpen,
+  setIsOpen,
 }) {
   return (
     <div className={`library ${isOpen ? "open" : ""}`}>
@@ -17,6 +18,8 @@ export default function Library({
       {songs.map((item) => {
         return (
           <LibrarySong
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
             isPlaying={isPlaying}
             audioRef={audioRef}
             setIsPlaying={setIsPlaying}

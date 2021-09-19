@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'Balsamiq Sans', cursive;
-
+  font-family: "Balsamiq Sans", cursive;
 }
 @import "./player";
 @import "./songInfo";
@@ -13,3 +12,14 @@
 @import "./library";
 @import "./library-song";
 @import "./nav";
+
+@media screen and (max-width: 768px) {
+  .App {
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .App {
+    height: 100vh;
+  }
+}

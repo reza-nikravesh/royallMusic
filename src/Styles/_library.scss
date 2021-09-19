@@ -27,9 +27,20 @@
     border-radius: 10px 10px 10px 10px;
   }
 }
-.open{
+.open {
   transform: translateX(0%);
   transition: all 0.5s ease;
   opacity: 1;
-
+}
+@media screen and (min-width: 375px) and (max-width: 414px) {
+  .library {
+    z-index: 10;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .library {
+    z-index: 10;
+    width: 100%;
+  }
 }

@@ -10,7 +10,12 @@ export default function LibrarySong({
   setIsPlaying,
   audioRef,
   isPlaying,
+  setIsOpen,
+  isOpen,
 }) {
+  function closeLibrary() {
+    setIsOpen(!isOpen);
+  }
   function updateData() {
     const newSong = songs.map((song) => {
       if (song.id === id) return { ...song, active: true };
@@ -30,6 +35,7 @@ export default function LibrarySong({
     const selectedSong = songs.filter((item) => item.id === id);
     setCurrentSong(selectedSong[0]);
     updateData();
+    closeLibrary();
   }
   return (
     <div
