@@ -31,7 +31,7 @@ export const Range = styled.input`
   overflow: hidden;
   display: block;
   appearance: none;
-  margin: 0;
+  margin: 0px;
   height: ${height};
   cursor: pointer;
   border-radius: 1rem;
