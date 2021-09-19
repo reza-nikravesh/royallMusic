@@ -126,6 +126,56 @@ export function data() {
       id: uuidv4(),
       active: false,
     },
+    {
+      name: "Bella Ciao",
+      artist: "Bandiera Rossa",
+      cover: "https://i.pinimg.com/736x/72/91/6d/72916d1de9afb745ceb384524c28eeb9.jpg",
+      audio:
+        "https://dl.baarzesh.net/music/2020/4/BELLA_CIAO%20.mp3",
+      color: ["#080808", "#DF0209"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "In The End",
+      artist: "Tommee Profitt",
+      cover: "https://i1.sndcdn.com/artworks-000404623485-7m3s32-t500x500.jpg",
+      audio:
+        "https://download.enfamusic.ir/2020-11/Linkin-Park-In-The-End-320.mp3",
+      color: ["#051626", "#DBE3E5"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Space",
+      artist: "HHU",
+      cover: "https://myteh-song.biz/wp-content/uploads/2020/12/hs-HHU-Space-300x300.jpg",
+      audio:
+        "http://dl.tehsong.xyz/tehsong/Hosein/99/Dey/Persian-Music/05/HHU%20-%20Space.mp3",
+      color: ["#30211E", "#F5F4E3"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Rihanna ",
+      artist: "Diamond",
+      cover: "https://prooz.ir/pv/https%3A%2F%2Fmiimiik.com%2Fmusic%2Fwp-content%2Fuploads%2F2019%2F10%2FDiamonds_Rihanna.jpg",
+      audio:
+        "https://cdn.avaa.cloud/files/musics/98/12/05/Rihanna%20-%20Diamonds.mp3",
+      color: ["#C4BBB6", "#685F5A"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "детство",
+      artist: "Rauf & Faik",
+      cover: "https://soundpedia.ir/wp-content/uploads/2020/04/rauf-faik-2019.jpg",
+      audio:
+        "https://dl.ahaang.com/98/10/15/Rauf%20Faik%20-%20Aetctbo.mp3",
+      color: ["#313131", "#E9E9E9"],
+      id: uuidv4(),
+      active: false,
+    },
   ];
 }
 

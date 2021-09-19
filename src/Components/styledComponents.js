@@ -50,9 +50,9 @@ export const Range = styled.input`
         90deg,
         ${(props) =>
             props.startColor ? props.startColor : "rgba(9, 121, 46, 1)"}
-          40%,
+          30%,
         ${(props) => (props.endColor ? props.endColor : "rgba(0, 212, 255, 1)")}
-          100%
+          80%
       )
       100% 50% / 100% ${trackHeight} no-repeat transparent;
   }
