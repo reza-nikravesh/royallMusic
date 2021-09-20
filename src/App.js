@@ -11,7 +11,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="App">
+    <div className={`App ${isOpen ? "library-active" : ""}`}>
       <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
       <Library
         isOpen={isOpen}

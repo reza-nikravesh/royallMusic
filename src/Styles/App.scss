@@ -6,6 +6,14 @@
   box-sizing: border-box;
   font-family: "Balsamiq Sans", cursive;
 }
+
+.App {
+  transition: all 0.5s ease;
+}
+.library-active {
+  margin-left: 20%;
+}
+
 @import "./player";
 @import "./songInfo";
 @import "./controls";
@@ -13,12 +21,12 @@
 @import "./library-song";
 @import "./nav";
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 360px) and (max-width: 460px) {
   .App {
     height: 100vh;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .App {
     height: 100vh;
   }
